@@ -40,9 +40,8 @@ const server = http.createServer((req, res) => {
                     try {
                         html = fs.readFileSync(path.join(__dirname, "views", "form.html"), "utf-8");
                     } catch (err) {
-                        console.log(err.message)
+                        console.log(err.message);
                     }
-
                 }
                 res.write(html);
                 res.end();
